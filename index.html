@@ -26,23 +26,18 @@
         const url = new URL(`https://${shop}/admin/oauth/authorize`);
         const redirectUrl = new URL(window.location.href)
         redirectUrl.search = ""
-        redirectUrl.searchParams.append("client_id", clientId);
 
         url.searchParams.append("client_id", clientId);
         url.searchParams.append("scope", accessScope);
-        // url.searchParams.append("redirect_uri", redirectUrl.href);
 
-        const urlToPaste = url.toString() + "&redirect_uri=" + redirectUrl.href
-
-
-        console.warn("Paste this URL to the browser", urlToPaste)
+        console.warn("Paste this URL to the browser", redirectUrl.toString())
     
-      } else if (shop && code && clientId) {
+      } else if (shop && code) {
         const curl = `curl -X POST https://${shop}/admin/oauth/access_token \
 -H "Content-Type: application/json" \
 -d '{
   "code": "${code}",
-  "client_id": "${clientId}",
+  "client_id": "__client_id_here__",
   "client_secret": "__secret_here__"
 }'
 `;
