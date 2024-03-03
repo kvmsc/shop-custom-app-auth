@@ -35,7 +35,7 @@
         const urlToPaste = url.toString() + "&redirect_uri=" + redirectUrl.href
 
 
-        console.warn("Paste this URL to the browser", url.toString())
+        console.warn("Paste this URL to the browser", urlToPaste)
     
       } else if (shop && code && clientId) {
         const curl = `curl -X POST https://${shop}/admin/oauth/access_token \
