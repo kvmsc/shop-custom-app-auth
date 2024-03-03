@@ -29,8 +29,9 @@
 
         url.searchParams.append("client_id", clientId);
         url.searchParams.append("scope", accessScope);
+        url.searchParams.append("redirect_uri", redirectUrl.href);
 
-        console.warn("Paste this URL to the browser", redirectUrl.toString())
+        console.warn("Paste this URL to the browser", url.toString())
     
       } else if (shop && code) {
         const curl = `curl -X POST https://${shop}/admin/oauth/access_token \
