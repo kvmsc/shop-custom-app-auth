@@ -18,7 +18,7 @@
       //@ts-check
       const query = new URLSearchParams(window.location.search);
       const shop = query.get("shop");
-      const accessScope = query.get("access_scope");
+      const accessScope = "write_customers,customer_read_customers,write_discounts,write_assigned_fulfillment_orders,write_merchant_managed_fulfillment_orders,write_third_party_fulfillment_orders,write_fulfillments,write_orders,write_products,write_products,write_inventory";
       const clientId = query.get("client_id");
       const code = query.get("code");
 
@@ -60,6 +60,7 @@
     <p>
       This page is used to help with the Shopify OAuth flow. It will redirect
       the user to the Shopify OAuth page with the correct parameters.
+      write_customers,customer_read_customers,write_discounts,write_assigned_fulfillment_orders,write_merchant_managed_fulfillment_orders,write_third_party_fulfillment_orders,write_fulfillments,write_orders,write_products,write_products,write_inventory
     </p>
     <p>
       If the user is redirected back to this page with a <code>code</code> query
