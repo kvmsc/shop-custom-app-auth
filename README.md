@@ -4,7 +4,7 @@ Usage:
 
 1. Note Client ID & Client Secret of the app
 2. Set App URL to: https://kvmsc.github.io/shop-custom-app-auth/?client_id={client_id}&access_scope={scopes_seperated_by_comma}
-3. Add Allowed redirection URL(s): https://talecommerce.github.io/shop-custom-app-auth
+3. Add Allowed redirection URL(s): https://kvmsc.github.io/shop-custom-app-auth/
 4. Open or Install the app
 5. Open browser console and click redirect link
 6. Open browser console and copy cURL request to grab access token
