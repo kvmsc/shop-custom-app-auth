@@ -18,7 +18,7 @@
       //@ts-check
       const query = new URLSearchParams(window.location.search);
       const shop = query.get("shop");
-      const accessScope = "read_assigned_fulfillment_orders,write_assigned_fulfillment_orders,read_customers,read_fulfillments,write_fulfillments,read_inventory,read_locations,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders,read_orders,write_orders,read_products,read_returns,write_returns,read_third_party_fulfillment_orders,write_third_party_fulfillment_orders,read_users";
+      const accessScope = "write_products,read_products,read_inventory";
       const clientId = query.get("client_id");
       const code = query.get("code");
 
